@@ -1,0 +1,23 @@
+.bg-primary {
+  background-color: #042c70 !important;
+}
+.heading {
+  color: #042c70 !important;
+  font-size: 80px;
+}
+
+.textColor {
+  color: #042c70 !important;
+}
+
+.headingTwo {
+  font-size: 50px;
+}
+
+.accordion {
+  --bs-accordion-active-bg: rgb(231, 231, 231);
+  --bs-accordion-btn-bg: rgb(231, 231, 231);
+  --bs-accordion-btn-icon: none;
+  --bs-accordion-btn-active-icon: none;
+  --bs-accordion-btn-focus-box-shadow: none;
+}

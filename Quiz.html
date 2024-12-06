@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./Assets/Logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz Application</title>
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <nav class="navbar bg-primary navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img class="img-fluid" src="./Assets/Logo.jpg" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start bg-primary"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="#"
+              ><img class="img-fluid" src="./Assets/Logo.jpg" alt="logo"
+            /></a>
+            <button
+              type="button"
+              class="btn-close bg-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body justify-content-end">
+            <div class="button">
+              <button
+                onclick="result()"
+                class="btn btn-light fw-bold textColor"
+              >
+                Results
+              </button>
+              <button onclick="logOut()" class="btn text-white fw-bold">
+                Anus <i class="fa-solid fa-right-from-bracket"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Quiz Questions and Answer -->
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="quizwindow">
+            <h1 id="question" class="border border-1 p-2 bg-body-tertiary">
+              Question will appear here
+            </h1>
+            <ul class="list-unstyled mt-4">
+              <li class="border border-1 p-2 bg-body-tertiary my-2">
+                <input type="radio" id="option1" name="quizOption" />
+                <label for="option1" id="label1">option</label>
+              </li>
+              <li class="border border-1 p-2 bg-body-tertiary my-2">
+                <input type="radio" id="option2" name="quizOption" />
+                <label for="option2" id="label2">option</label>
+              </li>
+              <li class="border border-1 p-2 bg-body-tertiary my-2">
+                <input type="radio" id="option3" name="quizOption" />
+                <label for="option3" id="label3">option</label>
+              </li>
+              <li class="border border-1 p-2 bg-body-tertiary my-2">
+                <input type="radio" id="option4" name="quizOption" />
+                <label for="option4" id="label4">option</label>
+              </li>
+            </ul>
+            <button
+              onclick="nextQuestion()"
+              class="btn bg-primary text-white px-5 rounded-0"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script
+      src="https://kit.fontawesome.com/1c074bcd7a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+    <script src="bootstrapscript.js"></script>
+    <script src="bundle.js"></script>
+    <script src="pooper.js"></script>
+  </body>
+</html>
