@@ -208,7 +208,7 @@ var showPercentage = document.getElementById("showPercentage");
 
 function result1() {
   var percentage = Math.round((score / htmlQuiz.length) * 100);
-  var statusResult = ``;
+  var statusResult = "";
   if (percentage < 70) {
     statusResult = "You are failed! Better Luck Next Time";
   } else {
