@@ -1,3 +1,47 @@
+// darkmode toggle
+
+var button = document.getElementById("buttondark");
+function darkmode() {
+  if (button.checked) {
+    localStorage.setItem("mode", "dark");
+  } else {
+    localStorage.setItem("mode", "white");
+  }
+  checkMode();
+}
+
+var element = document.getElementById("dark");
+var heading = document.getElementsByClassName("texting");
+console.log(heading);
+
+function checkMode() {
+  var currentMode = localStorage.getItem("mode");
+  if (currentMode === "dark") {
+    button.checked = true;
+    element.className = "bg-black";
+
+    for (var i = 0; i < heading.length; i++) {
+      heading[i].classList.remove("text-dark-emphasis", "textColor");
+      heading[i].classList.add("text-white");
+    }
+  } else {
+    element.className = "bg-white";
+    for (var i = 0; i < heading.length; i++) {
+      heading[i].classList.remove("text-white");
+      heading[i].classList.add("textColor");
+    }
+  }
+}
+
+function setByDefault() {
+  var checkModeState = localStorage.getItem("mode");
+  if (checkModeState === null) {
+    checkMode();
+  } else {
+    checkMode();
+  }
+}
+
 // login/signin variables
 var getName;
 var getEmail;
@@ -5,35 +49,6 @@ var getPassword;
 var email = document.getElementById("email");
 var password = document.getElementById("password");
 
-// // result variables
-// var status1 = document.getElementById("status");
-// var totalQuestion = document.getElementById("totalQuestion");
-// var correctAnswer = document.getElementById("correctAnswer");
-// var showPercentage = document.getElementById("showPercentage");
-
-// function result1() {
-//   var getResult = localStorage.getItem("resultInfo");
-//   var getResultObject = JSON.parse(getResult);
-
-//   var percentage = Math.round(
-//     (getResultObject.correctAnswer / getResultObject.totalQuestion) * 100
-//   );
-//   var statusResult = "";
-//   if (percentage < 70) {
-//     statusResult = "You are failed! Better Luck Next Time";
-//   } else {
-//     statusResult = "Congratulations! You are Passed";
-//     status1.classList.remove("text-danger");
-//     status1.classList.add("text-success");
-//     showPercentage.classList.remove("border-danger");
-//     showPercentage.classList.add("border-success");
-//   }
-//   status1.innerHTML = statusResult;
-//   totalQuestion.innerHTML = getResultObject.totalQuestion;
-//   correctAnswer.innerHTML = getResultObject.correctAnswer;
-//   showPercentage.innerHTML = percentage;
-// }
-// result1();
 // Signup function
 
 function signUp() {
@@ -145,50 +160,6 @@ function logOut() {
         window.location.href = "index.html";
       }
     });
-}
-
-// darkmode toggle
-
-var button = document.getElementById("buttondark");
-function darkmode() {
-  if (button.checked) {
-    localStorage.setItem("mode", "dark");
-  } else {
-    localStorage.setItem("mode", "white");
-  }
-  checkMode();
-}
-
-var element = document.getElementById("dark");
-var heading = document.getElementsByClassName("texting");
-console.log(heading);
-
-function checkMode() {
-  var currentMode = localStorage.getItem("mode");
-  if (currentMode === "dark") {
-    button.checked = true;
-    element.className = "bg-black";
-
-    for (var i = 0; i < heading.length; i++) {
-      heading[i].classList.remove("text-dark-emphasis", "textColor");
-      heading[i].classList.add("text-white");
-    }
-  } else {
-    element.className = "bg-white";
-    for (var i = 0; i < heading.length; i++) {
-      heading[i].classList.remove("text-white");
-      heading[i].classList.add("textColor");
-    }
-  }
-}
-
-function setByDefault() {
-  var checkModeState = localStorage.getItem("mode");
-  if (checkModeState === null) {
-    checkMode();
-  } else {
-    checkMode();
-  }
 }
 
 window.onload = setByDefault();
