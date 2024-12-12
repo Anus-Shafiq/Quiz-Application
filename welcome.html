@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Quiz Application</title>
   </head>
-  <body>
+  <body id="dark">
     <!-- navbar -->
 
     <nav class="navbar bg-primary navbar-expand-lg">
@@ -17,14 +17,15 @@
           ><img class="img-fluid" src="./Assets/Logo.jpg" alt="logo"
         /></a>
         <button
-          class="navbar-toggler bg-white"
+          class="navbar-toggler bg-white "
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"   
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          
+          <i class="fa-solid fa-bars fs-2 textColor"></i>
         </button>
         <div
           class="offcanvas offcanvas-start bg-primary"
@@ -38,18 +39,29 @@
             /></a>
             <button
               type="button"
-              class="btn-close bg-white"
+              class="btn-close bg-white "
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body justify-content-end">
+          <div class="offcanvas-body justify-content-end ">
             <div class="button">
               <button onclick="result()" class="btn btn-light fw-bold textColor">Results</button>
-              <button onclick="logOut()" class="btn text-white fw-bold " id="name"> Anus
-                 <i class="fa-solid fa-right-from-bracket"></i>
+              <button onclick="logOut()" class="btn text-white fw-bold "  > 
+                 <span class="name"></span> <span><i class="fa-solid fa-right-from-bracket"></i></span>
               </button>
+              
             </div>
+            <div class="form-check form-switch ms-4 align-content-center m-0">
+              <input
+                onchange="darkmode()"
+                class="form-check-input fs-3 my-auto"
+                type="checkbox"
+                role="switch"
+                id="buttondark"
+              />
+            </div>
+
           </div>
         </div>
       </div>
@@ -59,22 +71,22 @@
       <div class="container">
         <div class="row">
           <div class="col-10 mb-3">
-            <h1 class="textColor fw-light">
-              Welcome, <span class="name">Anus</span>
+            <h1 class="textColor fw-light texting">
+              Welcome, <span class="name"></span>
             </h1>
           </div>
-          <hr />
+          <hr class="texting" />
           
           <!-- card 1 -->
           <div class="col-4 d-flex justify-content-center">
-            <div class="card p-3 w-75">
-              <div class="card-title">
+            <div class="card p-3 w-75 ">
+              <div class="card-title ">
                 <h3>Python</h3>
               </div>
               <div class="card-text">
-                <p class="textColor fs-5">1 Subject</p>
+                <p class="textColor fs-5 ">1 Subject</p>
               </div>
-              <button onclick="python()" class="btn textColor">Join</button>
+              <button onclick="python()" class="btn textColor ">Join</button>
             </div>
          </div>
 

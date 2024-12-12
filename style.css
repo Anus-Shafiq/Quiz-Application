@@ -2,8 +2,9 @@
   background-color: #042c70 !important;
 }
 .heading {
-  color: #042c70 !important;
-  font-size: 80px;
+  /* color: #042c70 !important;
+  font-size: 80px; */
+  font-size: 5rem;
 }
 
 .textColor {
@@ -11,7 +12,8 @@
 }
 
 .headingTwo {
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 3.5rem;
 }
 
 .accordion {
@@ -20,4 +22,10 @@
   --bs-accordion-btn-icon: none;
   --bs-accordion-btn-active-icon: none;
   --bs-accordion-btn-focus-box-shadow: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #042c70;
+  border: #042c70;
+  box-shadow: rgb(255, 255, 255) 0px 0px 6px 0px;
 }

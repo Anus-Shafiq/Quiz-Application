@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Quiz Application</title>
   </head>
-  <body>
+  <body id="dark">
     <!-- navbar -->
 
     <nav class="navbar bg-primary navbar-expand-lg">
@@ -24,7 +24,7 @@
           aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fa-solid fa-bars fs-2 textColor"></i>
         </button>
         <div
           class="offcanvas offcanvas-start bg-primary"
@@ -52,8 +52,19 @@
                 Results
               </button>
               <button onclick="logOut()" class="btn text-white fw-bold">
-                Anus <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="name"></span>
+                <span><i class="fa-solid fa-right-from-bracket"></i></span>
               </button>
+            </div>
+
+            <div class="form-check form-switch ms-4 align-content-center m-0">
+              <input
+                onchange="darkmode()"
+                class="form-check-input fs-3 my-auto"
+                type="checkbox"
+                role="switch"
+                id="buttondark"
+              />
             </div>
           </div>
         </div>
@@ -64,12 +75,12 @@
       <div class="container">
         <div class="row">
           <div class="col-10 mb-3">
-            <h1 class="textColor fw-light">
+            <h1 class="textColor fw-light texting">
               Module-1 Exam
-              <span class="textColor fs-5">(Subject 3)</span>
+              <span class="fs-5">(Subject 3)</span>
             </h1>
           </div>
-          <hr />
+          <hr class="texting" />
           <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item my-2">
               <h2 class="accordion-header">

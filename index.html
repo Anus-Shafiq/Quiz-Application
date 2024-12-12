@@ -9,14 +9,25 @@
     <link rel="stylesheet" href="style.css" />
     <title>Quiz Application</title>
   </head>
-  <body>
+  <body id="dark">
     <!-- navbar -->
     <nav class="navbar bg-primary">
       <div class="container">
         <a class="navbar-brand"
           ><img class="img-fluid" src="./Assets/Logo.jpg" alt="logo"
         /></a>
-        <h3 class="text-white">v 0.1 Beta</h3>
+        <div class="d-flex gap-5 align-items-center">
+          <h3 class="text-white p-0 m-0">v 0.1 Beta</h3>
+          <div class="form-check form-switch ms-4 align-content-center m-0">
+            <input
+              onchange="darkmode()"
+              class="form-check-input fs-3 my-auto"
+              type="checkbox"
+              role="switch"
+              id="buttondark"
+            />
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -24,11 +35,11 @@
     <section class="mt-5">
       <div class="container">
         <div class="col-12 text-center">
-          <h1 class="heading fw-light">Quiz Application</h1>
-          <h2 class="mt-5 fw-light headingTwo">
+          <h1 class="heading fw-light texting textColor">Quiz Application</h1>
+          <h2 class="mt-5 fw-light headingTwo texting">
             Saylani Mass IT Training Program
           </h2>
-          <p class="fw-light fs-5 mt-4 text-dark-emphasis">
+          <p class="fw-light fs-5 mt-4 text-dark-emphasis texting">
             Saylani Mass IT Training program is an institude who delivers latest
             IT Education.
             <br />
@@ -36,7 +47,7 @@
             is running under Saylani Welfare Trust Management.
           </p>
           <div class="button mt-5">
-            <h5>Start Your Exam Here</h5>
+            <h5 class="texting">Start Your Exam Here</h5>
             <div class="mt-3">
               <button
                 type="button"
