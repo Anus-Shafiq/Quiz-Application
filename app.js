@@ -12,7 +12,6 @@ function darkmode() {
 
 var element = document.getElementById("dark");
 var heading = document.getElementsByClassName("texting");
-console.log(heading);
 
 function checkMode() {
   var currentMode = localStorage.getItem("mode");
