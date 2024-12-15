@@ -41,6 +41,8 @@ function setByDefault() {
   }
 }
 
+window.onload = setByDefault();
+
 // login/signin variables
 var getName;
 var getEmail;
@@ -160,5 +162,3 @@ function logOut() {
       }
     });
 }
-
-window.onload = setByDefault();
