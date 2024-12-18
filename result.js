@@ -7,6 +7,7 @@ var showPercentage = document.getElementById("showPercentage");
 function result1() {
   var getResult = localStorage.getItem("resultInfo");
   var getResultObject = JSON.parse(getResult);
+  var resultstatus = localStorage.getItem("resultAvailable");
 
   var percentage = Math.round(
     (getResultObject.correctAnswer / getResultObject.totalQuestion) * 100

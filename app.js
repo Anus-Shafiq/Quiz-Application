@@ -50,6 +50,13 @@ var getPassword;
 var email = document.getElementById("email");
 var password = document.getElementById("password");
 
+// Regex
+var emailRegex = /^\S+@\S+\.\S+$/;
+
+var nameRegex = /^[a-zA-Z]+$/;
+
+var passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
 // Signup function
 
 function signUp() {
@@ -57,16 +64,18 @@ function signUp() {
   getEmail = document.getElementById("getEmail").value;
   getPassword = document.getElementById("getPassword").value;
 
-  if (getName.trim() !== "") {
-    if (getEmail.trim() !== "") {
-      if (getPassword.trim() !== "") {
+  if (nameRegex.test(getName)) {
+    if (emailRegex.test(getEmail)) {
+      if (passRegex.test(getPassword)) {
         Swal.fire({
           title: "Sign up Successfull",
 
           icon: "success",
         });
       } else {
-        Swal.fire("Please Enter Your Password");
+        Swal.fire(
+          "Please Enter Your Password with minimum lenght 6 with at least one number & special character"
+        );
       }
     } else {
       Swal.fire("Please Enter Your Valid Email");
@@ -127,7 +136,12 @@ function module1() {
 }
 
 function continueBtn() {
-  window.location.href = "quiz.html";
+  var resultstatus = localStorage.getItem("resultAvailable");
+  if (resultstatus == "false") {
+    window.location.href = "result.html";
+  } else {
+    window.location.href = "quiz.html";
+  }
 }
 
 function result() {

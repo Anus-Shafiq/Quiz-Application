@@ -191,6 +191,7 @@ function nextQuestion() {
       var result = { totalQuestion: htmlQuiz.length, correctAnswer: score };
       var resultObject = JSON.stringify(result);
       localStorage.setItem("resultInfo", resultObject);
+      localStorage.setItem("resultAvailable", false);
       window.location.href = "result.html";
     }
   }
