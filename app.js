@@ -53,7 +53,7 @@ var password = document.getElementById("password");
 // Regex
 var emailRegex = /^\S+@\S+\.\S+$/;
 
-var nameRegex = /^[a-zA-Z]+$/;
+var nameRegex = /^[a-zA-Z0-9_ ]*$/;
 
 var passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 
