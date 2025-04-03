@@ -17,14 +17,13 @@
           ><img class="img-fluid" src="./Assets/Logo.jpg" alt="logo"
         /></a>
         <button
-          class="navbar-toggler bg-white "
+          class="navbar-toggler bg-white"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"   
+          aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
-          
           <i class="fa-solid fa-bars fs-2 textColor"></i>
         </button>
         <div
@@ -39,18 +38,23 @@
             /></a>
             <button
               type="button"
-              class="btn-close bg-white "
+              class="btn-close bg-white"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body justify-content-end ">
+          <div class="offcanvas-body justify-content-end">
             <div class="button">
-              <button onclick="result()" class="btn btn-light fw-bold textColor">Results</button>
-              <button onclick="logOut()" class="btn text-white fw-bold "  > 
-                 <span class="name"></span> <span><i class="fa-solid fa-right-from-bracket"></i></span>
+              <button
+                onclick="result()"
+                class="btn btn-light fw-bold textColor"
+              >
+                Results
               </button>
-              
+              <button onclick="logOut()" class="btn text-white fw-bold">
+                <span class="name text-capitalize"></span>
+                <span><i class="fa-solid fa-right-from-bracket"></i></span>
+              </button>
             </div>
             <div class="form-check form-switch ms-4 align-content-center m-0">
               <input
@@ -61,7 +65,6 @@
                 id="buttondark"
               />
             </div>
-
           </div>
         </div>
       </div>
@@ -72,26 +75,26 @@
         <div class="row">
           <div class="col-10 mb-3">
             <h1 class="textColor fw-light texting">
-              Welcome, <span class="name"></span>
+              Welcome, <span class="name text-capitalize"></span>
             </h1>
           </div>
           <hr class="texting" />
-          
+
           <!-- card 1 -->
           <div class="col-4 d-flex justify-content-center">
-            <div class="card p-3 w-75 ">
-              <div class="card-title ">
+            <div class="card p-3 w-75">
+              <div class="card-title">
                 <h3>Python</h3>
               </div>
               <div class="card-text">
-                <p class="textColor fs-5 ">1 Subject</p>
+                <p class="textColor fs-5">1 Subject</p>
               </div>
-              <button onclick="python()" class="btn textColor ">Join</button>
+              <button onclick="python()" class="btn textColor">Join</button>
             </div>
-         </div>
+          </div>
 
-            <!-- card 4 -->
-         <div class="col-4 d-flex justify-content-center">
+          <!-- card 4 -->
+          <div class="col-4 d-flex justify-content-center">
             <div class="card p-3 w-75">
               <div class="card-title">
                 <h3>Web And Mobile</h3>
@@ -101,9 +104,9 @@
               </div>
               <button onclick="webnapp()" class="btn textColor">Join</button>
             </div>
-         </div>
-             <!-- card 3 -->
-         <div class="col-4 d-flex justify-content-center">
+          </div>
+          <!-- card 3 -->
+          <div class="col-4 d-flex justify-content-center">
             <div class="card p-3 w-75">
               <div class="card-title">
                 <h3>Module-1 Exam</h3>
@@ -113,12 +116,15 @@
               </div>
               <button onclick="module1()" class="btn textColor">Join</button>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://kit.fontawesome.com/1c074bcd7a.js" crossorigin="anonymous"
+    <script
+      src="https://kit.fontawesome.com/1c074bcd7a.js"
+      crossorigin="anonymous"
     ></script>
     <script src="app.js"></script>
     <script src="bootstrapscript.js"></script>

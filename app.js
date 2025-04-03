@@ -135,7 +135,8 @@ function module1() {
   window.location.href = "module.html";
 }
 
-function continueBtn() {
+function continueBtn(quizCategory) {
+  localStorage.setItem("selectedQuiz", quizCategory);
   var resultstatus = localStorage.getItem("resultAvailable");
   if (resultstatus == "false") {
     window.location.href = "result.html";
